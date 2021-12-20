@@ -1,0 +1,18 @@
+
+<script>
+var n = prompt("Pick a number");
+        var choose = prompt("Choose between sum or product");
+        var total = 0;
+        if (choose == "sum") {
+            for (let i = 0; i <= n; i++) {
+            total += i;
+            }
+        }else if (choose == "product") {
+            total = 1;
+            for (let i = 1; i <= n; i++) {
+            total *= i;
+        }
+    }
+        alert(total)
+
+</script>

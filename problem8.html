@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem8</title>
+</head>
+<body>
+
+    <script>
+        var input = prompt("Please enter a number between 1 and 100 / you have 8 trials");
+        var random = Math.floor(Math.random()*100 + 1);
+        var trial = 1;
+        while (trial <8){
+            if (input == random) {
+                alert('Correct with ' + trial + ' trials!');
+                break;
+            } 
+            if (input > random){
+                alert("The number is too large " + trial + "/8");
+                input = prompt("Enter another number");
+            }
+            else if (input < random){
+                alert("The number is too small "+ trial + "/8");
+                input = prompt("Enter another number");
+            }
+            trial++;
+            if (trial >= 8) {
+                alert('You lost all trails!')
+            }
+        }
+    </script>
+</body>
+</html>
